@@ -9,7 +9,7 @@ const orm = {
         });
     },
     insertOne(burger_name, cb){
-        const queryString="INSERT INTO burgers (burger_name) VALUES ?";
+        const queryString="INSERT INTO burgers (burger_name) VALUES (?)";
         connection.query(
             queryString,
             burger_name,
