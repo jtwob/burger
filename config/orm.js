@@ -1,25 +1,32 @@
 const connection = require('./connection');
 
-class ORM {
-    constructor(burger_name){
-        this.burger_name = burger_name;
+const orm = {
+    selectAll(cb) {
+        const queryString = "SELET * FROM burgers";
+        connection.query(queryString, (err, result) => {
+            if(err) throw err;
+            cb(result);
+        });
+    },
+    insertOne(burger_name, cb){
+        const queryString="INSERT INTO burgers (burger_name) VALUES ?";
+        connection.query(
+            queryString,
+            burger_name,
+            (err, result) => {
+                if(err) throw err;
+               cb(result);
+        });
+    },
+    updateOne(burger_id, cb){
+        const queryString="UPDATE burgers SET devoured = true WHERE id = ?";
+        connection.query(
+            queryString,
+            burger_id,
+            (err, result) => {
+                if(err) throw err;
+                cb(result);
+        });
     }
 }
-
-const selectAll = function(){
-    /**
-     * psudocode
-     * query='SELECT * FROM burgers_db'
-     * 
-     */
-}
-
-const insertOne = function(){
-
-}
-
-const updateOne = function(){
-
-}
-
-module.exports = ORM;
+module.exports = orm;
