@@ -7,7 +7,7 @@
                 {{#unless this.devoured}}
                 <li class="list-group-item">
                     <form action="/burgers/{{this.id}}?_method=POST" method="POST">
-                        <div class="col-sm-2">{{this.burger_name}}</div>
+                        <div class="col-sm-4">{{this.burger_name}}</div>
                         <button type="submit" class="btn btn-primary">Devour</button>
                     </form>
                 </li>
