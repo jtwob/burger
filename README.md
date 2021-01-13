@@ -3,6 +3,8 @@
 ## Description
 This is a simple full-stack application that uses MySQL, Node, Express, Handlebars and a homemade ORM. It allows users to add a new burger to a database, and to devour the burger, rendering it disabled. Not much to the functionality portion but it's got a lot going on behing the scenes!
 
+![App](./public/assets/img/app.png)
+
 ## Table of Contents
 1. [Description](#description)
 2. [Installation](#installation)
@@ -11,6 +13,7 @@ This is a simple full-stack application that uses MySQL, Node, Express, Handleba
 5. [Contributing](#contributing)
 6. [Tests](#tests)
 7. [Questions](#questions)
+
 
 ## Installation
 npm install
