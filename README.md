@@ -19,7 +19,7 @@ This is a simple full-stack application that uses MySQL, Node, Express, Handleba
 npm install
 
 ## Usage
-'node server.js' or see it on heroku
+'node server.js'
 
 ## License
 The MIT License
