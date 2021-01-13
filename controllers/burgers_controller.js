@@ -18,7 +18,7 @@ router.post("/burgers", (req, res)=>{
     });
 });
 
-router.put("/burgers/:id", (req, res)=>{
+router.post("/burgers/:id", (req, res)=>{
     burger.updateOne(req.params.id, ()=>{
         res.redirect("/");
     });
